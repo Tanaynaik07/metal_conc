@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;    
+}
+.container {
+    max-width: 400px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    -moz-appearance: textfield; /* For Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* For Chrome */
+    margin: 0;
+}
+
+.color-output {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff3cd; /* Light background to show initial text clearly */
+}
+
+.info,.data{
+    min-height: 80vh;
+    width: 40%;
+    background-color: black;
+    color: white;
+}
+ .info{
+    text-align: center;
+    width: 40%;
+    padding-top: 5rem;
+ }
+
+.flex{
+    display: flex;
+}
+
+.data p{
+    font-size:30px
+}
+
+.data{
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 2rem;
+}
