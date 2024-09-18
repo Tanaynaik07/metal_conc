@@ -1,28 +1,23 @@
 function update() {
-    const co = parseFloat(document.getElementById('co').value) || 0;
-    const li = parseFloat(document.getElementById('li').value) || 0;
-    const mn = parseFloat(document.getElementById('mn').value) || 0;
-    const ni = parseFloat(document.getElementById('ni').value) || 0;
-    const colorOutput = document.getElementById('colorOutput');
-    const info =document.getElementById('info');
-    const name=document.getElementById("name");
-    const properties=document.getElementById("properties");
-    const conc=document.getElementById("concentration");
-    const uses=document.getElementById("uses");
- 
-    if(co==1 && li==2 && mn==3.3  && ni==4){
-        info.innerText="asdasdadsnahjdkJANDguwndguls dlusgdsfsfsfsfsbfnksdfasd aksda;sknda sdusdsdnfsfdysf lsdflsnfluisnaygdnaysfgyuagfsaflufluasf";
-        name.innerText="Name: "+"ABC";
-        properties.innerText="Name: "+"GHI";
-        conc.innerText="Concentration: "+"DEF";
-        uses.innerText="Uses: "+"A,N,A,W";
+    const red = parseInt(document.getElementById('red').value) || 0;
+    const green = parseInt(document.getElementById('green').value) || 0;
+    const blue = parseInt(document.getElementById('blue').value) || 0;
+    const result = document.getElementById('result');
+
+    // Determine the resulting color description based on input values
+    if (red <= 50 && red>=48  && green>=41 && green <= 42 && blue>=57 &&  blue <= 58) {
+        result.innerText = "Concentration: 0ppm";
+    } else if (red>=45 && red <= 46  && green>=35 && green <= 36 && blue>=49 &&  blue <= 50) {
+        result.innerText = "Concentration: 2ppm";
+    } else if (red>=46 && red <= 48  && green>=35 && green <= 36 && blue>=49 &&  blue <= 50) {
+        result.innerText = "Concentration: 4ppm";
+    } else if (red>=44 && red <= 45  && green>=32 && green <= 32 && blue>=45 &&  blue <= 46) {
+        result.innerText = "Concentration: 6ppm";
+    } else if (red>=45 && red <= 46  && green>=33 && green <= 33 && blue>=46 &&  blue <= 46) {
+        result.innerText = "Concentration: 8ppm";
+    } else if (red>=37 && red <= 38  && green>=24 && green <= 25 && blue>=37 &&  blue <= 38) {
+        result.innerText = "Concentration: 10ppm";
+    }  else {
+        result.innerText = "Concentration: Off the Chart";
     }
-    else if(co==4 && li==12 && mn==3.3  && ni==4.43){
-        info.innerText="asdasdadsnahjdkJANDguwndguls dlusgdsfsfsfsfsbfnksdfasd aksda;sknda sdusdsdnfsfdysf lsdflsnfluisnaygdnaysfgyuagfsaflufluasf";
-        name.innerText="Name: "+"abc";
-        properties.innerText="properties: "+"ghi";
-        conc.innerText="Concentration: "+"def";
-        uses.innerText="Uses: "+"a,n,a,w";
-    }
-   
 }
