@@ -3,41 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metal concentration</title>
+    <title>RGB Color Concentration</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="flex">
-    <div class="info" id="info"></div>
-    <div class="container">
-        <h1>Metal concentrations</h1>
-        <div class="input-group">
-            <label for="co">Co 59 Helium KED</label>
-            <input type="text" id="co" value="0" style="width: 100%;" oninput="update()">
-        </div>
-        <div class="input-group">
-            <label for="li">Li 7 Helium KED</label>
-            <input type="text" id="li" value="0" style="width: 100%;" oninput="update()">
-        </div>
-        <div class="input-group">
-            <label for="mn">Mn 55 Helium KED</label>
-            <input type="text" id="mn" value="0" style="width: 100%;" oninput="update()">
-        </div>
+        <div class="container" >
+            <h1>Concentration Reader</h1>
+            <h3>Enter the RGB values to get the Concentration</h3>
+            <div class="input-group">
+                <label for="red">Red</label>
+                <input type="number" id="red" min="0" max="255" value="0" style="width: 100%;"  >
+            </div>
+            <div class="input-group">
+                <label for="green">Green</label>
+                <input type="number" id="green" min="0" max="255" value="0" style="width: 100%;"  >
+            </div>
+            <div class="input-group">
+                <label for="blue">Blue</label> 
+                <input type="number" id="blue" min="0" max="255" value="0" style="width: 100%;"  >
+            </div>
 
-        <div class="input-group"></div>
-            <label for="ni">Ni 60 Helium KED</label>
-            <input type="text" id="ni" value="0" style="width: 100%;" oninput="update()">
+            <div class="result"><p id="result"></p></div>
+            <button onclick="update()">Submit</button> <!-- Here is the button -->
         </div>
+    </div>
 
-    <div class="data flex">
-        <p id="name">Name: </p>
-        <p id="properties">Properties: </p>
-        <p id="concentration">concentration:</p>
-        <p id="uses">Uses: </p>
-    </div>
-    </div>
-    <button onclick="update()">Submit</button> <!-- Here is the button -->
-    <div class="color-output" id="colorOutput">Resultant shade</div>
     <script src="index.js"></script>
 </body>
 </html>
